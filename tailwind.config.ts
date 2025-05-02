@@ -56,10 +56,14 @@ export default {
 				webtah: {
 					blue: '#33C3F0',
 					'blue-dark': '#1EAEDB',
-					mint: '#F2FCE2', 
-					gray: '#F1F1F1',
+					mint: '#E5F8F0', 
+					cream: '#FFF8E8',
+					peach: '#FFEEE2',
+					lavender: '#F1F0FB',
 					'gray-dark': '#333333',
-					'gray-light': '#F8F8F8',
+					'gray-light': '#FAFAFA',
+					'text-primary': '#2D3748',
+					'text-secondary': '#4A5568'
 				}
 			},
 			borderRadius: {

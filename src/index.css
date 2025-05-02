@@ -19,17 +19,14 @@
     --primary: 196 89% 50%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 156 75% 95%;
+    --secondary: 160 52% 95%;
     --secondary-foreground: 222 47% 11%;
 
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 156 75% 95%;
+    --accent: 270 83% 99%;
     --accent-foreground: 222 47% 11%;
-
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
@@ -44,7 +41,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-webtah-text-primary font-sans antialiased;
   }
 
   .reveal {
@@ -76,5 +73,29 @@
 
   .feature-card {
     @apply bg-white p-6 rounded-lg shadow-soft card-hover;
+  }
+  
+  .service-item {
+    @apply flex items-start mb-4;
+  }
+  
+  .service-item svg {
+    @apply text-webtah-blue-dark mr-3 mt-1 flex-shrink-0;
+  }
+  
+  .service-category {
+    @apply bg-white p-6 rounded-lg shadow-soft mb-8;
+  }
+  
+  .service-category h3 {
+    @apply text-xl font-semibold mb-4 text-webtah-text-primary;
+  }
+  
+  .check-list li {
+    @apply flex items-start mb-2;
+  }
+  
+  .check-list li svg {
+    @apply text-webtah-blue-dark mr-2 mt-1 flex-shrink-0;
   }
 }

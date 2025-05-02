@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Shield, Globe, Check, Users } from 'lucide-react';
+import { Shield, Check, Users } from 'lucide-react';
 import ServiceCard from '@/components/ServiceCard';
 
 const Cybersecurity = () => {
@@ -12,79 +12,352 @@ const Cybersecurity = () => {
     <>
       <HeroSection 
         title="Cybersecurity Services" 
-        subtitle="Military-grade protection for your digital assets"
+        subtitle="Elite Protection for a Digital-First World"
         ctaText="Get a Free Consultation"
       />
       
-      {/* Services Overview */}
       <section className="section-padding bg-white">
         <div className="container-custom">
           <ScrollReveal>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Security Solutions</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Protect your business with our full range of cybersecurity services.
+            <div className="max-w-4xl mx-auto mb-12">
+              <p className="text-lg text-webtah-text-secondary">
+                We specialize in proactive, deep-dive cybersecurity solutions designed to expose, mitigate, and
+                neutralize digital threats before they strike. Our mission is to protect your organization's critical
+                assets with military-grade tactics and industry-certified expertise.
               </p>
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ScrollReveal delay={100}>
-              <ServiceCard
-                title="Penetration Testing"
-                description="Thorough security assessments of your networks, web applications, mobile apps, and WiFi infrastructure to identify vulnerabilities before attackers do."
-                icon={<Shield size={24} />}
-                link="/contact"
-              />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={200}>
-              <ServiceCard
-                title="Vulnerability Assessment"
-                description="Comprehensive evaluation of your cloud security posture, host configurations, and overall security architecture to identify potential weaknesses."
-                icon={<Shield size={24} />}
-                link="/contact"
-              />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={300}>
-              <ServiceCard
-                title="Red Teaming"
-                description="Simulated cyber attacks that test your organization's detection and response capabilities using real-world adversary tactics and techniques."
-                icon={<Shield size={24} />}
-                link="/contact"
-              />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={400}>
-              <ServiceCard
-                title="Incident Response"
-                description="Rapid response to security incidents, threat hunting, and post-incident analysis to minimize damage and prevent future breaches."
-                icon={<Shield size={24} />}
-                link="/contact"
-              />
-            </ScrollReveal>
-            
-            <ScrollReveal delay={500}>
-              <ServiceCard
-                title="Compliance & Training"
-                description="Security awareness training for your team and assistance with regulatory compliance requirements like GDPR, HIPAA, PCI DSS, and more."
-                icon={<Shield size={24} />}
-                link="/contact"
-              />
-            </ScrollReveal>
-          </div>
+          {/* 1. Penetration Testing */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">1</span>
+                Penetration Testing
+              </h2>
+              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Expose vulnerabilities before attackers do.</p>
+              <p className="text-lg text-webtah-text-secondary mb-8">
+                Our ethical hackers simulate real-world cyberattacks to identify your security gaps — from
+                infrastructure to applications and wireless networks.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                <div className="service-category bg-webtah-lavender">
+                  <h3>Network Penetration Testing</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Internal & external network analysis</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Firewall & router misconfigurations</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Privilege escalation & lateral movement</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Active Directory exploitation</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Custom payload injection</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="service-category bg-webtah-peach">
+                  <h3>Web Application Testing</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>OWASP Top 10 vulnerabilities</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Logic flaws, broken authentication</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>SQL Injection, Cross-Site Scripting (XSS), CSRF</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Manual code review & automated scanning</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Secure API testing</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="service-category bg-webtah-mint">
+                  <h3>Mobile Application Testing</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Dynamic & static analysis (Android/iOS)</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>API endpoints, insecure data storage</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Code decompilation & reverse engineering</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Root/jailbreak bypass simulations</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Session hijacking attempts</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="service-category bg-webtah-cream">
+                  <h3>WiFi Network Testing</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Rogue AP detection</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>WPA2/WPA3 cracking</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Evil twin & man-in-the-middle attacks</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>MAC spoofing and sniffing</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Signal leakage & guest network separation audit</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 2. Vulnerability Assessment */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">2</span>
+                Vulnerability Assessment
+              </h2>
+              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Comprehensive visibility. Informed decisions.</p>
+              <p className="text-lg text-webtah-text-secondary mb-8">
+                We scan, categorize, and prioritize all security exposures in your IT environment. From cloud to on-prem, we give you a clear remediation roadmap.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="service-category bg-webtah-lavender">
+                  <h3>Cloud Security Assessment</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>AWS / Azure / GCP config reviews</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Misconfigured S3 buckets, IAM roles, and public exposure</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Security posture evaluation</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Monitoring & alerting verification</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="service-category bg-webtah-peach">
+                  <h3>Host Build Review</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>OS hardening verification</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Service audits & unnecessary ports detection</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Patch management audit</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Antivirus/firewall status</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>CIS Benchmark alignment</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 3. Red Teaming */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">3</span>
+                Red Teaming
+              </h2>
+              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Real attackers don't follow rules — neither do we.</p>
+              <p className="text-lg text-webtah-text-secondary mb-8">
+                Our red team emulates advanced threat actors to test your full defense stack — people, processes, and technology.
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-webtah-mint p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold mb-4">Attack Methods</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Social engineering (phishing, vishing)</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Physical access testing</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Stealth malware injection</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Evasion of EDR, firewalls, and antivirus</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>C2 (command & control) channels and pivoting</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-webtah-cream p-6 rounded-lg">
+                  <h3 className="text-lg font-semibold mb-4">Deliverables</h3>
+                  <ul className="space-y-2">
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Attack narrative with real-life exploit paths</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Detection and response analysis</span>
+                    </li>
+                    <li className="check-list">
+                      <Check size={18} />
+                      <span>Strategic guidance for long-term resilience</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 4. Incident Response */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">4</span>
+                Incident Response & Threat Hunting (Add-On)
+              </h2>
+              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Breach containment and digital forensics.</p>
+              <p className="text-lg text-webtah-text-secondary mb-8">
+                Rapid response teams for live breaches or suspicious activity.
+              </p>
+              
+              <div className="bg-webtah-lavender p-6 rounded-lg mb-6">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Root cause analysis</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Memory & log forensics</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Malware analysis</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Evidence preservation</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Full containment and remediation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ScrollReveal>
+
+          {/* 5. Security Awareness */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">5</span>
+                Security Awareness & Compliance Training
+              </h2>
+              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Your employees: your first line of defense.</p>
+              
+              <div className="bg-webtah-peach p-6 rounded-lg mb-6">
+                <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Phishing simulation</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Cyber hygiene training</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Policy awareness</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>Executive threat briefings</span>
+                  </li>
+                  <li className="check-list">
+                    <Check size={18} />
+                    <span>ISO 27001, SOC 2, PCI-DSS, HIPAA compliance guidance</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
-      
-      {/* Benefits Section */}
-      <section className="section-padding bg-webtah-gray">
+
+      {/* Why Choose Us */}
+      <section className="section-padding bg-webtah-mint">
         <div className="container-custom">
           <ScrollReveal>
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">The Webtah Security Advantage</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-                Why our cybersecurity services stand out from the competition.
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Us?</h2>
+              <p className="text-xl text-webtah-text-secondary max-w-2xl mx-auto">
+                The Webtah Security Advantage
               </p>
             </div>
           </ScrollReveal>
@@ -92,54 +365,45 @@ const Cybersecurity = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ScrollReveal delay={100}>
               <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Military-Grade Defense</h3>
-                <p className="text-gray-600">
-                  Our security protocols and methodologies are based on military and intelligence agency standards, providing the highest level of protection.
+                <h3 className="text-xl font-semibold mb-3">Certified Experts</h3>
+                <p className="text-webtah-text-secondary">
+                  Our team includes OSCP, CEH, CISSP, PNPT, CREST certified professionals with experience protecting Fortune 500 companies.
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={200}>
               <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Detailed Reporting</h3>
-                <p className="text-gray-600">
-                  Comprehensive, easy-to-understand reports with clear remediation steps and prioritized vulnerabilities based on risk.
+                <h3 className="text-xl font-semibold mb-3">Manual-first Testing</h3>
+                <p className="text-webtah-text-secondary">
+                  We prioritize hands-on testing over automated tools to find vulnerabilities that scanners miss.
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={300}>
               <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Certified Experts</h3>
-                <p className="text-gray-600">
-                  Our team includes OSCP, CEH, and CISSP certified professionals with experience protecting Fortune 500 companies.
+                <h3 className="text-xl font-semibold mb-3">Enterprise-grade Reporting</h3>
+                <p className="text-webtah-text-secondary">
+                  Comprehensive, easy-to-understand reports with clear remediation steps and prioritized vulnerabilities based on risk.
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={400}>
               <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Continuous Support</h3>
-                <p className="text-gray-600">
-                  We don't just find issues - we help you fix them with ongoing guidance and support throughout remediation.
+                <h3 className="text-xl font-semibold mb-3">100% Confidentiality</h3>
+                <p className="text-webtah-text-secondary">
+                  NDA-backed services with strict data handling protocols and privacy controls.
                 </p>
               </div>
             </ScrollReveal>
             
             <ScrollReveal delay={500}>
               <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Business-Focused Approach</h3>
-                <p className="text-gray-600">
-                  We understand your business needs and align our security recommendations with your organizational goals.
-                </p>
-              </div>
-            </ScrollReveal>
-            
-            <ScrollReveal delay={600}>
-              <div className="feature-card">
-                <h3 className="text-xl font-semibold mb-3">Latest Threat Intelligence</h3>
-                <p className="text-gray-600">
-                  We stay updated on emerging threats and vulnerabilities to provide you with the most current protection.
+                <h3 className="text-xl font-semibold mb-3">Tailored Packages</h3>
+                <p className="text-webtah-text-secondary">
+                  Custom security solutions for businesses of all sizes, from SMEs to large enterprises.
                 </p>
               </div>
             </ScrollReveal>

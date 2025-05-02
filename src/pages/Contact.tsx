@@ -10,8 +10,8 @@ const Contact = () => {
     <>
       <HeroSection 
         title="Contact Us" 
-        subtitle="Get in touch with our team"
-        ctaText="Send a Message"
+        subtitle="Ready to secure your future and grow your business online?"
+        ctaText="Get in Touch"
       />
       
       <section className="section-padding bg-white">
@@ -19,9 +19,9 @@ const Contact = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <ScrollReveal>
               <div>
-                <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-                <p className="text-gray-600 mb-8">
-                  Have questions or ready to start your project? Fill out the form and our team will get back to you as soon as possible.
+                <h2 className="text-3xl font-bold mb-6">Let's Talk</h2>
+                <p className="text-webtah-text-secondary mb-8">
+                  Whether you need cybersecurity services, a new website, or digital marketing help, our team is ready to assist you. Fill out the form and we'll get back to you as soon as possible.
                 </p>
                 
                 <div className="space-y-6">
@@ -31,8 +31,8 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold text-lg">Our Office</h3>
-                      <p className="text-gray-600">71-75 Shelton Street, Covent Garden,</p>
-                      <p className="text-gray-600">London, WC2H 9JQ</p>
+                      <p className="text-webtah-text-secondary">71-75 Shelton Street, Covent Garden,</p>
+                      <p className="text-webtah-text-secondary">London, WC2H 9JQ, United Kingdom</p>
                     </div>
                   </div>
                   
@@ -58,21 +58,29 @@ const Contact = () => {
                 </div>
                 
                 <div className="mt-12">
-                  <h3 className="font-semibold text-lg mb-4">Business Hours</h3>
-                  <div className="space-y-2 text-gray-600">
-                    <div className="flex justify-between">
-                      <span>Monday - Friday</span>
-                      <span>9:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday</span>
-                      <span>10:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday</span>
-                      <span>Closed</span>
-                    </div>
-                  </div>
+                  <h3 className="font-semibold text-lg mb-4">How We Can Help</h3>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-webtah-blue-dark rounded-full mr-2"></span>
+                      <span>Cybersecurity consulting and assessments</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-webtah-blue-dark rounded-full mr-2"></span>
+                      <span>Website design and development</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-webtah-blue-dark rounded-full mr-2"></span>
+                      <span>Web application development</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-webtah-blue-dark rounded-full mr-2"></span>
+                      <span>Digital marketing and SEO services</span>
+                    </li>
+                    <li className="flex items-center">
+                      <span className="w-2 h-2 bg-webtah-blue-dark rounded-full mr-2"></span>
+                      <span>Free website and security audits</span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </ScrollReveal>
@@ -86,7 +94,7 @@ const Contact = () => {
         </div>
       </section>
       
-      <section className="section-padding bg-webtah-gray">
+      <section className="section-padding bg-webtah-lavender">
         <div className="container-custom">
           <ScrollReveal>
             <h2 className="text-3xl font-bold mb-6 text-center">Find Us</h2>
