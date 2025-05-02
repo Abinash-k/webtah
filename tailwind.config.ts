@@ -54,16 +54,16 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				webtah: {
-					blue: '#33C3F0',
-					'blue-dark': '#1EAEDB',
-					mint: '#E5F8F0', 
-					cream: '#FFF8E8',
-					peach: '#FFEEE2',
-					lavender: '#F1F0FB',
-					'gray-dark': '#333333',
-					'gray-light': '#FAFAFA',
-					'text-primary': '#2D3748',
-					'text-secondary': '#4A5568'
+					blue: '#0047AB', // Royal blue
+					'blue-dark': '#00308F', // Deeper royal blue
+					mint: '#F8F8FF', // Ghost white (subtle)
+					cream: '#FFFFFF', // Pure white
+					peach: '#F5F5F5', // White smoke (very light gray)
+					lavender: '#F0F8FF', // Alice blue (very light blue)
+					'gray-dark': '#000000', // Black
+					'gray-light': '#FFFFFF', // White
+					'text-primary': '#000000', // Black
+					'text-secondary': '#333333' // Dark gray
 				}
 			},
 			borderRadius: {
