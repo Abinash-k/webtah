@@ -1,21 +1,35 @@
 
 import * as React from "react"
-
+import { useState } from "react"
 import { cn } from "@/lib/utils"
+
+interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+  hoverEffect?: boolean;
+}
 
 const Card = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-2xl border bg-card text-card-foreground shadow-soft hover:shadow-hover transition-all duration-300",
-      className
-    )}
-    {...props}
-  />
-))
+  CardProps
+>(({ className, hoverEffect = true, ...props }, ref) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "rounded-2xl border bg-card text-card-foreground shadow-soft transition-all duration-300",
+        hoverEffect && "hover:shadow-hover",
+        className
+      )}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      style={hoverEffect ? {
+        transform: isHovered ? 'translateY(-5px)' : 'translateY(0px)',
+      } : {}}
+      {...props}
+    />
+  )
+})
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<
