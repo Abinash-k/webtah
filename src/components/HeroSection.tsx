@@ -52,6 +52,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           </svg>
         </div>
       </div>
+      
+      <div className="absolute top-0 right-0 w-1/3 h-full">
+        <div className="relative h-full">
+          <div className="absolute top-1/4 right-10 w-32 h-32 bg-blue-500/10 rounded-full animate-pulse"></div>
+          <div className="absolute top-1/3 right-32 w-20 h-20 bg-blue-600/10 rounded-full animate-pulse" style={{ animationDelay: '1s' }}></div>
+          <div className="absolute top-1/2 right-20 w-16 h-16 bg-blue-700/10 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+        </div>
+      </div>
     </div>
   );
 };

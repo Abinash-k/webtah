@@ -33,18 +33,18 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
   };
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 text-center">
+    <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center">
       {imageSrc && (
-        <div className="mb-4 overflow-hidden rounded-md">
+        <div className="mb-4 overflow-hidden rounded-md group">
           <img 
             src={imageSrc} 
             alt={imageAlt || title} 
-            className="w-full h-auto object-cover transition-transform hover:scale-105"
+            className="w-full h-auto object-cover transition-transform group-hover:scale-105 duration-500"
           />
         </div>
       )}
       
-      <div className={`w-16 h-16 rounded-lg ${getColorClass()} flex items-center justify-center mx-auto mb-6`}>
+      <div className={`w-16 h-16 rounded-lg ${getColorClass()} flex items-center justify-center mx-auto mb-6 transform transition-transform hover:rotate-6 hover:scale-110 duration-300`}>
         {React.cloneElement(icon as React.ReactElement, { className: 'w-8 h-8' })}
       </div>
       
@@ -54,8 +54,8 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({
         <p className="text-gray-600 mb-4 text-sm">{description}</p>
       )}
       
-      <Link to={link} className="text-blue-600 font-medium inline-flex items-center gap-1 hover:underline">
-        Learn More <span>→</span>
+      <Link to={link} className="text-blue-600 font-medium inline-flex items-center gap-1 hover:gap-2 hover:underline transition-all duration-300">
+        Learn More <span className="transition-transform duration-300">→</span>
       </Link>
     </div>
   );
