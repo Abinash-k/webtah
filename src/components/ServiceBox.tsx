@@ -6,9 +6,11 @@ interface ServiceBoxProps {
   title: string;
   icon: React.ReactNode;
   color: string;
+  link?: string;
+  description?: string;
 }
 
-const ServiceBox: React.FC<ServiceBoxProps> = ({ title, icon, color }) => {
+const ServiceBox: React.FC<ServiceBoxProps> = ({ title, icon, color, link = "/cybersecurity", description }) => {
   const getColorClass = () => {
     switch (color) {
       case 'blue': return 'bg-blue-50 text-blue-600';
@@ -28,7 +30,11 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, icon, color }) => {
       
       <h3 className="text-lg font-bold mb-4">{title}</h3>
       
-      <Link to="/cybersecurity" className="text-blue-600 font-medium inline-flex items-center gap-1 hover:underline">
+      {description && (
+        <p className="text-gray-600 mb-4 text-sm">{description}</p>
+      )}
+      
+      <Link to={link} className="text-blue-600 font-medium inline-flex items-center gap-1 hover:underline">
         Learn More <span>→</span>
       </Link>
     </div>

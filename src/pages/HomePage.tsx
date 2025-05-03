@@ -6,7 +6,6 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { Shield, Lock, Eye, Code, Server, Bug } from 'lucide-react';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQSection from '@/components/FAQSection';
-import FeatureCard from '@/components/FeatureCard';
 import ServiceBox from '@/components/ServiceBox';
 
 const HomePage = () => {
@@ -87,6 +86,32 @@ const HomePage = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Vision and Mission Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-blue-600 mb-2">Our Purpose</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Vision & Mission</h2>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold text-blue-600 mb-4 text-center">Our Vision</h3>
+                <p className="text-lg text-gray-700">
+                  To become a leading force in cyber defense and digital transformation, enabling businesses worldwide to grow securely and confidently in an increasingly complex digital landscape. We envision a world where organizations can innovate without fear of cyber threats.
+                </p>
+              </div>
+              <div className="bg-gray-50 p-8 rounded-lg shadow-md">
+                <h3 className="text-2xl font-bold text-blue-600 mb-4 text-center">Our Mission</h3>
+                <p className="text-lg text-gray-700">
+                  To provide world-class cybersecurity services and innovative digital solutions that protect organizations from modern threats while empowering them to thrive in the digital economy. We're committed to delivering excellence through technical expertise, business understanding, and client partnership.
+                </p>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

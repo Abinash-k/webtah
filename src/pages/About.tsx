@@ -5,15 +5,37 @@ import ScrollReveal from '@/components/ScrollReveal';
 import { Users, Code, Shield, Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import TestimonialCard from '@/components/TestimonialCard';
 
 const About = () => {
   return (
     <>
-      <HeroSection 
-        title="About Webtah Technologies" 
-        subtitle="Securing Your Future. Building Your Digital Success."
-        ctaText="Meet Our Team"
-      />
+      <section className="relative overflow-hidden bg-gradient-to-r from-black to-blue-900 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[url('/pattern-bg.svg')] opacity-10"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/10 to-transparent"></div>
+        
+        <div className="container-custom relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase bg-blue-800/40 px-3 py-1 rounded-full mb-6">About Us</span>
+              <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
+                About <span className="text-blue-400">Webtah</span> <br />Technologies
+              </h1>
+              <p className="text-lg md:text-xl opacity-90 mb-8">
+                Securing Your Future. Building Your Digital Success.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="bg-white text-black hover:bg-white/90">
+                  Meet Our Team
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                  Our Process
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       {/* Mission Section */}
       <section className="section-padding bg-white">
@@ -60,6 +82,47 @@ const About = () => {
               </div>
             </ScrollReveal>
           </div>
+        </div>
+      </section>
+      
+      {/* Client Testimonials */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-blue-600 mb-2">Client Success Stories</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients <span className="text-blue-600">Say</span></h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Feedback from organizations that trust our cybersecurity expertise
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <TestimonialCard 
+                quote="Webtah Technologies transformed our cybersecurity posture. Their penetration testing uncovered vulnerabilities we had no idea existed." 
+                author="Jessica Brown" 
+                role="CTO, FinSecure Inc." 
+                rating={5}
+                delay={100}
+              />
+              
+              <TestimonialCard 
+                quote="Their red team operations provided invaluable insights into our security gaps. The detailed reporting helped us prioritize our security investments." 
+                author="Michael Reynolds" 
+                role="CISO, TechCorp" 
+                rating={5}
+                delay={200}
+              />
+              
+              <TestimonialCard 
+                quote="We sleep better at night knowing Webtah is monitoring our systems. Their incident response team detected and neutralized a threat before any damage occurred." 
+                author="Sarah Johnson" 
+                role="IT Director" 
+                rating={5}
+                delay={300}
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
       

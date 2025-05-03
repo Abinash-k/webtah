@@ -1,18 +1,35 @@
 
 import React from 'react';
 import { MapPin, Mail, Phone } from 'lucide-react';
-import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
 import ContactForm from '@/components/ContactForm';
 
 const Contact = () => {
   return (
     <>
-      <HeroSection 
-        title="Contact Us" 
-        subtitle="Ready to secure your future and grow your business online?"
-        ctaText="Get in Touch"
-      />
+      <section className="relative overflow-hidden bg-gradient-to-r from-black to-blue-900 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[url('/pattern-bg.svg')] opacity-10"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/10 to-transparent"></div>
+        
+        <div className="container-custom relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase bg-blue-800/40 px-3 py-1 rounded-full mb-6">Contact Us</span>
+              <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
+                Let's <span className="text-blue-400">Connect</span>
+              </h1>
+              <p className="text-lg md:text-xl opacity-90 mb-8">
+                Ready to secure your future and grow your business online?
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="#contact-form" className="bg-white text-black hover:bg-white/90 px-6 py-3 rounded-md font-medium text-lg">
+                  Get in Touch
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -86,7 +103,7 @@ const Contact = () => {
             </ScrollReveal>
             
             <ScrollReveal delay={200}>
-              <div className="bg-white rounded-lg shadow-soft p-6">
+              <div id="contact-form" className="bg-white rounded-lg shadow-soft p-6">
                 <ContactForm />
               </div>
             </ScrollReveal>

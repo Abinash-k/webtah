@@ -1,28 +1,99 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Globe, Code, LayoutDashboard, Check } from 'lucide-react';
+import { Globe, Code, LayoutDashboard, Check, Shield, Server } from 'lucide-react';
+import TestimonialCard from '@/components/TestimonialCard';
 
 const Development = () => {
   return (
     <>
-      <HeroSection 
-        title="Design & Development" 
-        subtitle="Build, Grow, and Dominate Online."
-        ctaText="Start Your Project"
-      />
+      <section className="relative overflow-hidden bg-gradient-to-r from-black to-blue-900 py-20 lg:py-32">
+        <div className="absolute inset-0 bg-[url('/pattern-bg.svg')] opacity-10"></div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/10 to-transparent"></div>
+        
+        <div className="container-custom relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-white">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase bg-blue-800/40 px-3 py-1 rounded-full mb-6">Design & Development</span>
+              <h1 className="text-3xl md:text-5xl xl:text-6xl font-bold mb-6">
+                Web <span className="text-blue-400">Development</span> <br />Solutions
+              </h1>
+              <p className="text-lg md:text-xl opacity-90 mb-8">
+                Build, Grow, and Dominate Online with Secure Web Development.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button size="lg" className="bg-white text-black hover:bg-white/90">
+                  Start Your Project
+                </Button>
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20">
+                  View Portfolio
+                </Button>
+              </div>
+            </div>
+            
+            <div className="hidden lg:flex justify-end">
+              <div className="relative">
+                <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
+                <div className="absolute bottom-10 -right-10 w-32 h-32 bg-blue-300 rounded-full opacity-20"></div>
+                <div className="bg-gradient-to-br from-blue-900 to-black p-8 rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md">
+                  <div className="flex items-center justify-center mb-6">
+                    <Code className="w-16 h-16 text-blue-400" />
+                  </div>
+                  <h3 className="text-xl text-white font-bold mb-4 text-center">Development Services</h3>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                      <p className="text-gray-300 text-sm">Custom Web Development</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                      <p className="text-gray-300 text-sm">Secure Applications</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                      <p className="text-gray-300 text-sm">E-commerce Solutions</p>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
+                      <p className="text-gray-300 text-sm">Responsive Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section className="section-padding bg-white">
         <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold mb-4">Our Vision & Mission</h2>
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-gray-50 p-8 rounded-lg mb-8">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-4">Vision</h3>
+                  <p className="text-lg">
+                    To revolutionize digital experiences by creating secure, innovative, and high-performing web solutions that empower businesses to lead in their industries.
+                  </p>
+                </div>
+                <div className="bg-gray-50 p-8 rounded-lg">
+                  <h3 className="text-2xl font-bold text-blue-600 mb-4">Mission</h3>
+                  <p className="text-lg">
+                    To deliver web development services that combine cutting-edge technology with security-first approach, ensuring our clients achieve their business objectives through robust digital solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+          
           <ScrollReveal>
             <div className="max-w-4xl mx-auto mb-12">
               <p className="text-lg text-webtah-text-secondary">
                 We design and develop powerful digital platforms that help you scale your business with clarity, 
                 creativity, and performance. Whether you're launching a startup or growing an established brand — 
-                we help you thrive online.
+                we help you thrive online with security at the forefront.
               </p>
             </div>
           </ScrollReveal>
@@ -184,6 +255,70 @@ const Development = () => {
               </div>
             </div>
           </ScrollReveal>
+        </div>
+      </section>
+      
+      {/* Core Values Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
+              <p className="text-xl text-webtah-text-secondary max-w-2xl mx-auto">
+                The principles that guide our development process and client relationships
+              </p>
+            </div>
+          </ScrollReveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <ScrollReveal delay={100}>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center mx-auto mb-6">
+                  <Shield className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Security-First</h3>
+                <p className="text-webtah-text-secondary text-center">
+                  We integrate security at every stage of development, not as an afterthought.
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={200}>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 rounded-lg bg-green-50 text-green-700 flex items-center justify-center mx-auto mb-6">
+                  <Code className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Technical Excellence</h3>
+                <p className="text-webtah-text-secondary text-center">
+                  We maintain the highest standards of code quality and technical innovation.
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={300}>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 rounded-lg bg-purple-50 text-purple-700 flex items-center justify-center mx-auto mb-6">
+                  <Server className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Client Partnership</h3>
+                <p className="text-webtah-text-secondary text-center">
+                  We build long-term relationships based on transparency, communication, and shared success.
+                </p>
+              </div>
+            </ScrollReveal>
+            
+            <ScrollReveal delay={400}>
+              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300">
+                <div className="w-16 h-16 rounded-lg bg-orange-50 text-orange-700 flex items-center justify-center mx-auto mb-6">
+                  <LayoutDashboard className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-center">Result-Driven</h3>
+                <p className="text-webtah-text-secondary text-center">
+                  We focus on creating solutions that deliver measurable business outcomes.
+                </p>
+              </div>
+            </ScrollReveal>
+          </div>
         </div>
       </section>
       
