@@ -27,6 +27,21 @@ const Contact = () => {
                 </a>
               </div>
             </div>
+            
+            <div className="hidden lg:block relative">
+              <img 
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=500"
+                alt="Business professional" 
+                className="rounded-lg shadow-lg object-cover max-w-md mx-auto"
+              />
+              <div className="absolute -bottom-4 -right-4 w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                  alt="Customer support representative"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -98,6 +113,29 @@ const Contact = () => {
                       <span>Free website and security audits</span>
                     </li>
                   </ul>
+                </div>
+                
+                <div className="mt-8 grid grid-cols-4 gap-2">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120" 
+                    alt="Team member" 
+                    className="w-full h-auto rounded-md"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120" 
+                    alt="Team member" 
+                    className="w-full h-auto rounded-md"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120" 
+                    alt="Team member" 
+                    className="w-full h-auto rounded-md"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=120&h=120" 
+                    alt="Team member" 
+                    className="w-full h-auto rounded-md"
+                  />
                 </div>
               </div>
             </ScrollReveal>

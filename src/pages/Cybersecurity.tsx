@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -31,15 +30,26 @@ const Cybersecurity = () => {
           {/* 1. Penetration Testing */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">1</span>
-                Penetration Testing
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Expose vulnerabilities before attackers do.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                Our ethical hackers simulate real-world cyberattacks to identify your security gaps — from
-                infrastructure to applications and wireless networks.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">1</span>
+                    Penetration Testing
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Expose vulnerabilities before attackers do.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    Our ethical hackers simulate real-world cyberattacks to identify your security gaps — from
+                    infrastructure to applications and wireless networks.
+                  </p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1548092372-0d1bd40894a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Cybersecurity professional working" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
                 <div className="service-category bg-webtah-lavender">
@@ -152,14 +162,25 @@ const Cybersecurity = () => {
           {/* 2. Vulnerability Assessment */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">2</span>
-                Vulnerability Assessment
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Comprehensive visibility. Informed decisions.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                We scan, categorize, and prioritize all security exposures in your IT environment. From cloud to on-prem, we give you a clear remediation roadmap.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Network security visualization" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">2</span>
+                    Vulnerability Assessment
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Comprehensive visibility. Informed decisions.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    We scan, categorize, and prioritize all security exposures in your IT environment. From cloud to on-prem, we give you a clear remediation roadmap.
+                  </p>
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="service-category bg-webtah-lavender">
@@ -216,14 +237,25 @@ const Cybersecurity = () => {
           {/* 3. Red Teaming */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">3</span>
-                Red Teaming
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Real attackers don't follow rules — neither do we.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                Our red team emulates advanced threat actors to test your full defense stack — people, processes, and technology.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">3</span>
+                    Red Teaming
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Real attackers don't follow rules — neither do we.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    Our red team emulates advanced threat actors to test your full defense stack — people, processes, and technology.
+                  </p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Hacker in hoodie" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="bg-webtah-mint p-6 rounded-lg">
@@ -276,14 +308,25 @@ const Cybersecurity = () => {
           {/* 4. Incident Response */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">4</span>
-                Incident Response & Threat Hunting (Add-On)
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Breach containment and digital forensics.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                Rapid response teams for live breaches or suspicious activity.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Security operations center" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">4</span>
+                    Incident Response & Threat Hunting (Add-On)
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Breach containment and digital forensics.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    Rapid response teams for live breaches or suspicious activity.
+                  </p>
+                </div>
+              </div>
               
               <div className="bg-webtah-lavender p-6 rounded-lg mb-6">
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -315,11 +358,22 @@ const Cybersecurity = () => {
           {/* 5. Security Awareness */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">5</span>
-                Security Awareness & Compliance Training
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Your employees: your first line of defense.</p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">5</span>
+                    Security Awareness & Compliance Training
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Your employees: your first line of defense.</p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Team training session" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="bg-webtah-peach p-6 rounded-lg mb-6">
                 <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -406,6 +460,37 @@ const Cybersecurity = () => {
                   Custom security solutions for businesses of all sizes, from SMEs to large enterprises.
                 </p>
               </div>
+            </ScrollReveal>
+          </div>
+          
+          <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+            <ScrollReveal delay={100}>
+              <img 
+                src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
+                alt="Cybersecurity professional" 
+                className="rounded-lg shadow-md object-cover w-full h-40"
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <img 
+                src="https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
+                alt="Security lock" 
+                className="rounded-lg shadow-md object-cover w-full h-40"
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
+              <img 
+                src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
+                alt="Network security" 
+                className="rounded-lg shadow-md object-cover w-full h-40"
+              />
+            </ScrollReveal>
+            <ScrollReveal delay={400}>
+              <img 
+                src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=200"
+                alt="Security professional at work" 
+                className="rounded-lg shadow-md object-cover w-full h-40"
+              />
             </ScrollReveal>
           </div>
         </div>

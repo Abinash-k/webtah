@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -38,9 +37,21 @@ const HomePage = () => {
               
               <div className="flex items-center mt-12">
                 <div className="flex -space-x-3">
-                  {[1, 2, 3].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-gray-400 border-2 border-blue-900"></div>
-                  ))}
+                  <img 
+                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                    alt="Team member" 
+                    className="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                    alt="Team member" 
+                    className="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100" 
+                    alt="Team member" 
+                    className="w-10 h-10 rounded-full border-2 border-blue-900 object-cover"
+                  />
                 </div>
                 <div className="ml-4">
                   <div className="flex items-center">
@@ -59,30 +70,11 @@ const HomePage = () => {
               <div className="relative">
                 <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
                 <div className="absolute bottom-10 -right-10 w-32 h-32 bg-blue-300 rounded-full opacity-20"></div>
-                <div className="bg-gradient-to-br from-blue-900 to-black p-8 rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md">
-                  <div className="flex items-center justify-center mb-6">
-                    <Shield className="w-16 h-16 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl text-white font-bold mb-4 text-center">Cyber Defense System</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Advanced Threat Detection</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Penetration Testing</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Security Assessment</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">24/7 Monitoring & Response</p>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                  alt="Cybersecurity concept" 
+                  className="rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md object-cover"
+                />
               </div>
             </div>
           </div>
@@ -128,44 +120,35 @@ const HomePage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 transition-all duration-300">
-                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                  <Shield className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">Penetration Testing</h3>
-                <p className="text-gray-600 mb-6">
-                  We simulate sophisticated cyber attacks to identify vulnerabilities in your systems before real attackers can exploit them.
-                </p>
-                <Link to="/development" className="text-blue-600 font-medium flex items-center gap-2 hover:underline">
-                  Learn More <span className="text-lg">→</span>
-                </Link>
-              </div>
+              <ServiceBox 
+                title="Penetration Testing" 
+                icon={<Shield />}
+                color="blue"
+                link="/cybersecurity"
+                description="We simulate sophisticated cyber attacks to identify vulnerabilities in your systems before real attackers can exploit them."
+                imageSrc="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                imageAlt="Security professional at work"
+              />
               
-              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 transition-all duration-300">
-                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                  <Lock className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">Vulnerability Assessment</h3>
-                <p className="text-gray-600 mb-6">
-                  Comprehensive scanning and analysis to identify, categorize, and prioritize security weaknesses in your IT environment.
-                </p>
-                <Link to="/development" className="text-blue-600 font-medium flex items-center gap-2 hover:underline">
-                  Learn More <span className="text-lg">→</span>
-                </Link>
-              </div>
+              <ServiceBox 
+                title="Vulnerability Assessment" 
+                icon={<Lock />}
+                color="blue"
+                link="/cybersecurity"
+                description="Comprehensive scanning and analysis to identify, categorize, and prioritize security weaknesses in your IT environment."
+                imageSrc="https://images.unsplash.com/photo-1562813733-b31f1c359edf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                imageAlt="Vulnerability scan results"
+              />
               
-              <div className="bg-white p-8 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 transition-all duration-300">
-                <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center mb-6">
-                  <Eye className="w-8 h-8 text-blue-600" />
-                </div>
-                <h3 className="text-xl font-bold mb-4">Red Team Operations</h3>
-                <p className="text-gray-600 mb-6">
-                  Elite security professionals simulate advanced, multi-layered attacks to test your complete defense capabilities.
-                </p>
-                <Link to="/contact" className="text-blue-600 font-medium flex items-center gap-2 hover:underline">
-                  Learn More <span className="text-lg">→</span>
-                </Link>
-              </div>
+              <ServiceBox 
+                title="Red Team Operations" 
+                icon={<Eye />}
+                color="blue"
+                link="/contact"
+                description="Elite security professionals simulate advanced, multi-layered attacks to test your complete defense capabilities."
+                imageSrc="https://images.unsplash.com/photo-1563206767-5b18f218e8de?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                imageAlt="Hacker in hoodie"
+              />
             </div>
           </ScrollReveal>
         </div>
@@ -232,42 +215,11 @@ const HomePage = () => {
               
               <div className="relative">
                 <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-400 opacity-10 rounded-full"></div>
-                <div className="bg-white rounded-lg shadow-lg p-6 border border-gray-200">
-                  <h3 className="text-2xl font-bold mb-6 text-center">Our Security Process</h3>
-                  <div className="space-y-8">
-                    <div className="flex gap-4">
-                      <div className="min-w-[32px] h-8 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">1</div>
-                      <div>
-                        <h4 className="font-bold mb-1">Discovery & Reconnaissance</h4>
-                        <p className="text-gray-600 text-sm">Thorough mapping of attack surfaces and potential entry points</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <div className="min-w-[32px] h-8 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">2</div>
-                      <div>
-                        <h4 className="font-bold mb-1">Vulnerability Scanning</h4>
-                        <p className="text-gray-600 text-sm">Automated and manual identification of security weaknesses</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <div className="min-w-[32px] h-8 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">3</div>
-                      <div>
-                        <h4 className="font-bold mb-1">Exploitation & Testing</h4>
-                        <p className="text-gray-600 text-sm">Ethical hacking to validate security gaps and assess impact</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex gap-4">
-                      <div className="min-w-[32px] h-8 flex items-center justify-center rounded-full bg-blue-600 text-white font-bold">4</div>
-                      <div>
-                        <h4 className="font-bold mb-1">Reporting & Remediation</h4>
-                        <p className="text-gray-600 text-sm">Detailed findings and actionable recommendations</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  alt="Security lock" 
+                  className="rounded-lg shadow-lg object-cover w-full"
+                />
               </div>
             </div>
           </ScrollReveal>
@@ -313,6 +265,29 @@ const HomePage = () => {
                 color="blue"
               />
             </div>
+            
+            <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
+              <img 
+                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="Laptop with code" 
+                className="rounded-lg shadow-lg object-cover w-full h-48"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1633265486064-086b219458ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="Cybersecurity concept" 
+                className="rounded-lg shadow-lg object-cover w-full h-48"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="Security team meeting" 
+                className="rounded-lg shadow-lg object-cover w-full h-48"
+              />
+              <img 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="Team working on laptops" 
+                className="rounded-lg shadow-lg object-cover w-full h-48"
+              />
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -354,6 +329,47 @@ const HomePage = () => {
                 delay={300}
               />
             </div>
+            
+            <div className="mt-16 text-center">
+              <h3 className="font-bold text-xl mb-6">Meet Some of Our Team Members</h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                    alt="Team member" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                    alt="Team member" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                    alt="Team member" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                    alt="Team member" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-20 h-20 rounded-full overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1533674689012-136b487b7736?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150"
+                    alt="Team member" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
           </ScrollReveal>
         </div>
       </section>
@@ -380,42 +396,11 @@ const HomePage = () => {
               
               <div className="hidden lg:block relative">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400 rounded-full opacity-20"></div>
-                <div className="bg-gradient-to-br from-blue-800 to-black p-8 rounded-lg shadow-2xl border border-blue-700/30">
-                  <h3 className="text-2xl font-bold mb-6 text-center">Security Health Check</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Network Vulnerability Scan</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Web Application Assessment</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Security Policy Review</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <svg className="w-6 h-6 text-blue-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span>Executive Summary Report</span>
-                    </li>
-                  </ul>
-                  <div className="mt-8 text-center">
-                    <span className="block text-2xl font-bold mb-2">Free</span>
-                    <span className="block text-sm opacity-80 mb-4">For qualified businesses</span>
-                    <Button variant="outline" className="border-white text-white hover:bg-white/20">
-                      Request Now
-                    </Button>
-                  </div>
-                </div>
+                <img 
+                  src="https://images.unsplash.com/photo-1626176970224-a289adfc1690?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                  alt="Security experts meeting" 
+                  className="rounded-lg shadow-2xl border border-blue-700/30 object-cover w-full"
+                />
               </div>
             </div>
           </ScrollReveal>

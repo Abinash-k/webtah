@@ -8,9 +8,19 @@ interface ServiceBoxProps {
   color: string;
   link?: string;
   description?: string;
+  imageSrc?: string;
+  imageAlt?: string;
 }
 
-const ServiceBox: React.FC<ServiceBoxProps> = ({ title, icon, color, link = "/cybersecurity", description }) => {
+const ServiceBox: React.FC<ServiceBoxProps> = ({ 
+  title, 
+  icon, 
+  color, 
+  link = "/cybersecurity", 
+  description,
+  imageSrc,
+  imageAlt
+}) => {
   const getColorClass = () => {
     switch (color) {
       case 'blue': return 'bg-blue-50 text-blue-600';
@@ -24,6 +34,16 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ title, icon, color, link = "/cy
 
   return (
     <div className="bg-white p-6 rounded-lg shadow-md border border-gray-200 hover:border-blue-500 hover:shadow-lg transition-all duration-300 text-center">
+      {imageSrc && (
+        <div className="mb-4 overflow-hidden rounded-md">
+          <img 
+            src={imageSrc} 
+            alt={imageAlt || title} 
+            className="w-full h-auto object-cover transition-transform hover:scale-105"
+          />
+        </div>
+      )}
+      
       <div className={`w-16 h-16 rounded-lg ${getColorClass()} flex items-center justify-center mx-auto mb-6`}>
         {React.cloneElement(icon as React.ReactElement, { className: 'w-8 h-8' })}
       </div>

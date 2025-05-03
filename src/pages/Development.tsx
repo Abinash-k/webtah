@@ -33,34 +33,11 @@ const Development = () => {
             </div>
             
             <div className="hidden lg:flex justify-end">
-              <div className="relative">
-                <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
-                <div className="absolute bottom-10 -right-10 w-32 h-32 bg-blue-300 rounded-full opacity-20"></div>
-                <div className="bg-gradient-to-br from-blue-900 to-black p-8 rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md">
-                  <div className="flex items-center justify-center mb-6">
-                    <Code className="w-16 h-16 text-blue-400" />
-                  </div>
-                  <h3 className="text-xl text-white font-bold mb-4 text-center">Development Services</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Custom Web Development</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Secure Applications</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">E-commerce Solutions</p>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-blue-400"></div>
-                      <p className="text-gray-300 text-sm">Responsive Design</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                alt="Web development team" 
+                className="rounded-lg shadow-2xl object-cover"
+              />
             </div>
           </div>
         </div>
@@ -98,18 +75,83 @@ const Development = () => {
             </div>
           </ScrollReveal>
 
+          {/* Team Section */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Our Development Team</h2>
+              
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div className="text-center">
+                  <div className="mb-4 overflow-hidden rounded-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                      alt="Developer portrait" 
+                      className="w-full h-auto object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="font-bold">Alex Morgan</h3>
+                  <p className="text-sm text-gray-500">Lead Developer</p>
+                </div>
+                <div className="text-center">
+                  <div className="mb-4 overflow-hidden rounded-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                      alt="Developer portrait" 
+                      className="w-full h-auto object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="font-bold">Sarah Lee</h3>
+                  <p className="text-sm text-gray-500">UX/UI Designer</p>
+                </div>
+                <div className="text-center">
+                  <div className="mb-4 overflow-hidden rounded-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                      alt="Developer portrait" 
+                      className="w-full h-auto object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="font-bold">David Chen</h3>
+                  <p className="text-sm text-gray-500">Backend Developer</p>
+                </div>
+                <div className="text-center">
+                  <div className="mb-4 overflow-hidden rounded-full">
+                    <img 
+                      src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
+                      alt="Developer portrait" 
+                      className="w-full h-auto object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="font-bold">Mia Johnson</h3>
+                  <p className="text-sm text-gray-500">Frontend Developer</p>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+
           {/* 1. Website Design */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">1</span>
-                Website Design
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Turn clicks into customers.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                We create custom, responsive websites that blend visual appeal with user experience — optimized 
-                for conversion and mobile-first from day one.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">1</span>
+                    Website Design
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Turn clicks into customers.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    We create custom, responsive websites that blend visual appeal with user experience — optimized 
+                    for conversion and mobile-first from day one.
+                  </p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1559028012-481c04fa702d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Web design mockup" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="bg-webtah-lavender p-8 rounded-lg mb-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
@@ -156,14 +198,25 @@ const Development = () => {
           {/* 2. Web Application Development */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">2</span>
-                Web Application Development
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">From ideas to high-performance apps.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                We build secure, scalable, and business-aligned web applications tailored to your workflow.
-              </p>
+              <div className="flex flex-col lg:flex-row-reverse gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">2</span>
+                    Web Application Development
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">From ideas to high-performance apps.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    We build secure, scalable, and business-aligned web applications tailored to your workflow.
+                  </p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1534665482403-a909d0d97c67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Developer coding" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 <div className="feature-card">
@@ -207,14 +260,25 @@ const Development = () => {
           {/* 3. Digital Marketing */}
           <ScrollReveal>
             <div className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
-                <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">3</span>
-                Digital Marketing
-              </h2>
-              <p className="text-xl font-medium text-webtah-blue-dark mb-6">Make your brand impossible to ignore.</p>
-              <p className="text-lg text-webtah-text-secondary mb-8">
-                We drive traffic, generate leads, and grow your online presence through targeted campaigns and data-backed strategies.
-              </p>
+              <div className="flex flex-col lg:flex-row gap-8 items-center mb-8">
+                <div className="lg:w-2/3">
+                  <h2 className="text-2xl md:text-3xl font-bold mb-6 flex items-center">
+                    <span className="w-10 h-10 rounded-full bg-webtah-blue flex items-center justify-center text-white mr-3">3</span>
+                    Digital Marketing
+                  </h2>
+                  <p className="text-xl font-medium text-webtah-blue-dark mb-6">Make your brand impossible to ignore.</p>
+                  <p className="text-lg text-webtah-text-secondary mb-8">
+                    We drive traffic, generate leads, and grow your online presence through targeted campaigns and data-backed strategies.
+                  </p>
+                </div>
+                <div className="lg:w-1/3">
+                  <img 
+                    src="https://images.unsplash.com/photo-1460925895917-afdab827c4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Marketing analytics" 
+                    className="rounded-lg shadow-lg object-cover"
+                  />
+                </div>
+              </div>
               
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div className="bg-webtah-peach p-6 rounded-lg">
@@ -250,6 +314,49 @@ const Development = () => {
                   <div className="mb-6">
                     <h4 className="font-medium text-lg mb-2">Analytics & Reporting</h4>
                     <p className="text-webtah-text-secondary mb-2">Google Analytics, SEMrush insights, traffic & behavior monitoring</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+          
+          {/* Project Showcase */}
+          <ScrollReveal>
+            <div className="mb-16">
+              <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Recent Projects</h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="overflow-hidden rounded-lg shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="E-commerce website" 
+                    className="w-full h-48 object-cover object-top transition-transform hover:scale-105"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">E-commerce Platform</h3>
+                    <p className="text-sm text-gray-500">Custom shopping experience</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Mobile application" 
+                    className="w-full h-48 object-cover object-top transition-transform hover:scale-105"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Health App Dashboard</h3>
+                    <p className="text-sm text-gray-500">User analytics platform</p>
+                  </div>
+                </div>
+                <div className="overflow-hidden rounded-lg shadow-md">
+                  <img 
+                    src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400"
+                    alt="Business website" 
+                    className="w-full h-48 object-cover object-top transition-transform hover:scale-105"
+                  />
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg">Corporate Website</h3>
+                    <p className="text-sm text-gray-500">Modern business presence</p>
                   </div>
                 </div>
               </div>
@@ -319,6 +426,19 @@ const Development = () => {
               </div>
             </ScrollReveal>
           </div>
+          
+          {/* Technology stack images */}
+          <div className="mt-16">
+            <h3 className="text-xl font-bold mb-6 text-center">Technologies We Work With</h3>
+            <div className="flex flex-wrap justify-center gap-6">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" width="60" height="60" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" width="60" height="60" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" width="60" height="60" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" width="60" height="60" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" width="60" height="60" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" width="60" height="60" />
+            </div>
+          </div>
         </div>
       </section>
       
@@ -374,6 +494,42 @@ const Development = () => {
                 </p>
               </div>
             </ScrollReveal>
+          </div>
+          
+          <div className="mt-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=500"
+                  alt="Team collaboration" 
+                  className="rounded-lg shadow-lg object-cover w-full h-80"
+                />
+              </div>
+              <div>
+                <div className="grid grid-cols-2 gap-4 h-full">
+                  <img 
+                    src="https://images.unsplash.com/photo-1552308995-2baac1ad5490?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                    alt="Web design mockup" 
+                    className="rounded-lg shadow-md object-cover w-full h-38"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                    alt="Developer team working" 
+                    className="rounded-lg shadow-md object-cover w-full h-38"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1599507593499-a3f7d7d97667?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                    alt="Website on devices" 
+                    className="rounded-lg shadow-md object-cover w-full h-38"
+                  />
+                  <img 
+                    src="https://images.unsplash.com/photo-1536148935331-408321065b18?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250"
+                    alt="Code on screen" 
+                    className="rounded-lg shadow-md object-cover w-full h-38"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
