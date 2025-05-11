@@ -6,13 +6,15 @@ interface ScrollRevealProps {
   threshold?: number;
   delay?: number;
   animation?: 'fade-up' | 'fade-left' | 'fade-right' | 'zoom-in';
+  duration?: number;
 }
 
 const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
   children, 
   threshold = 0.1, 
   delay = 0,
-  animation = 'fade-up' 
+  animation = 'fade-up',
+  duration = 800
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   
@@ -28,6 +30,7 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
       },
       {
         threshold,
+        rootMargin: '0px 0px -100px 0px' // Trigger earlier for smoother appearance
       }
     );
     
@@ -61,7 +64,10 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({
     <div 
       ref={ref} 
       className={`reveal ${getAnimationClass()}`} 
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ 
+        transitionDelay: `${delay}ms`,
+        transitionDuration: `${duration}ms`
+      }}
     >
       {children}
     </div>

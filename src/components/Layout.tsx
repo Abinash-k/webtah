@@ -37,9 +37,9 @@ const Layout: React.FC = () => {
     };
   }, []);
 
-  // Function to add gradient classes to alternating sections
+  // Remove gradient application function to clean up the sections
   useEffect(() => {
-    const applyGradients = () => {
+    const removeGradients = () => {
       const sections = document.querySelectorAll('section');
       const gradientClasses = [
         'bg-light-blue-gradient', 
@@ -50,24 +50,29 @@ const Layout: React.FC = () => {
         'bg-gentle-blue-gradient'
       ];
       
-      // Apply different gradient to alternating sections
-      sections.forEach((section, index) => {
-        if (!section.classList.contains('bg-gradient-to-r') && 
+      // Remove gradient classes from sections
+      sections.forEach((section) => {
+        gradientClasses.forEach(gradientClass => {
+          if (section.classList.contains(gradientClass)) {
+            section.classList.remove(gradientClass);
+          }
+        });
+        
+        // Add light background if needed
+        if (!section.classList.contains('bg-white') && 
             !section.classList.contains('bg-black') && 
             !section.classList.contains('bg-blue-900')) {
-          
-          const gradientClass = gradientClasses[index % gradientClasses.length];
-          section.classList.add(gradientClass);
+          section.classList.add('bg-white');
         }
       });
     };
     
-    // Apply gradients and run again if DOM changes
-    applyGradients();
+    // Apply changes and run again if DOM changes
+    removeGradients();
     
     // Create a mutation observer to watch for new sections
     const observer = new MutationObserver(() => {
-      applyGradients();
+      removeGradients();
     });
     
     // Start observing
