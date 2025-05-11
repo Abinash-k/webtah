@@ -27,7 +27,7 @@ const DigitalMarketingPage = () => {
                 <Button size="lg" className="bg-white text-purple-900 hover:bg-white/90 hover:scale-105 transition-all">
                   Get Started
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 hover:scale-105 transition-all">
+                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 hover:scale-105 transition-all text-zinc-950">
                   Free SEO Audit
                 </Button>
               </div>
