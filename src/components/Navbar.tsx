@@ -31,10 +31,6 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = [
-    { name: 'Home', path: '/' }
-  ];
-
   const serviceLinks = [
     { 
       name: 'Web Development', 
@@ -119,7 +115,7 @@ const Navbar = () => {
             Contact
           </Link>
           
-          <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-md hover:shadow-lg transition-all duration-300 hover:scale-105">Get a Free Audit</Button>
+          <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-md">Get a Free Audit</Button>
         </div>
 
         {/* Mobile Toggle */}

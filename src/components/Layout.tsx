@@ -55,7 +55,7 @@ const Layout: React.FC = () => {
         <Button 
           variant="gradient" 
           size="lg" 
-          className="shadow-glow hover:shadow-xl hover:scale-110 transition-all duration-300 bg-gradient-to-r from-blue-600 to-indigo-600"
+          className="shadow-glow bg-gradient-to-r from-blue-600 to-indigo-600"
         >
           Get Free Audit
         </Button>

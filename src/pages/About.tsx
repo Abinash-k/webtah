@@ -2,10 +2,11 @@
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Users, Code, Shield, Check } from 'lucide-react';
+import { Users, Code, Shield, Check, Target, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import TestimonialCard from '@/components/TestimonialCard';
+import VisionMission from '@/components/VisionMission';
 
 const About = () => {
   return (
@@ -25,10 +26,10 @@ const About = () => {
                 Securing Your Future. Building Your Digital Success.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button size="lg" className="bg-white text-black hover:bg-white/90">
+                <Button size="lg" className="bg-white text-black">
                   Meet Our Team
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 hover:shadow-white/20 hover:-translate-y-1 transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-white text-white">
                   Our Process
                 </Button>
               </div>
@@ -52,63 +53,260 @@ const About = () => {
         </div>
       </section>
       
-      {/* Mission Section */}
+      {/* Our Vision and Mission */}
+      <VisionMission />
+      
+      {/* Detailed Services Section */}
+      <section className="py-16 md:py-24 bg-webtah-lavender">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-blue-600 mb-2">What We Do</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Comprehensive Services</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                We offer a wide range of digital services to help businesses thrive in today's technology-driven world
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Web Development */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="h-14 w-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Code size={28} className="text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Web Development</h3>
+                <p className="text-gray-600 mb-4">
+                  We create custom, responsive, and high-performance websites and web applications tailored to your business needs.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Custom Website Development</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">E-commerce Solutions</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Progressive Web Applications</p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link to="/services/web-development">
+                    <Button variant="outline" className="w-full border-blue-600 text-blue-600">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Digital Marketing */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="h-14 w-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Target size={28} className="text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Digital Marketing</h3>
+                <p className="text-gray-600 mb-4">
+                  Data-driven marketing strategies to increase your online visibility, attract qualified leads, and boost conversions.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Search Engine Optimization (SEO)</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Social Media Marketing</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">PPC Advertising & Analytics</p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link to="/services/digital-marketing">
+                    <Button variant="outline" className="w-full border-blue-600 text-blue-600">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Cyber Security */}
+              <div className="bg-white p-8 rounded-lg shadow-md">
+                <div className="h-14 w-14 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                  <Shield size={28} className="text-blue-600" />
+                </div>
+                <h3 className="text-xl font-bold mb-4">Cyber Security</h3>
+                <p className="text-gray-600 mb-4">
+                  Comprehensive security solutions to protect your business from modern cyber threats and ensure data integrity.
+                </p>
+                <div className="space-y-2">
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Penetration Testing & Red Teaming</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Security Assessments & Audits</p>
+                  </div>
+                  <div className="flex items-start">
+                    <ChevronRight size={18} className="text-blue-600 mt-1 mr-2" />
+                    <p className="text-sm">Incident Response & Recovery</p>
+                  </div>
+                </div>
+                <div className="mt-6">
+                  <Link to="/services/cyber-security">
+                    <Button variant="outline" className="w-full border-blue-600 text-blue-600">
+                      Learn More
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+      
+      {/* Our Goals Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <ScrollReveal>
-              <div>
-                <h2 className="text-3xl font-bold mb-6">Our Core Mission</h2>
-                <p className="text-webtah-text-secondary mb-6">
-                  At Webtah Technologies, we are more than just a technology company — we are your long-term digital security and growth partner. Founded by a team of cybersecurity professionals and digital innovators, we help businesses protect their most valuable assets while also empowering them to thrive in the digital economy.
-                </p>
-                <p className="text-webtah-text-secondary mb-6">
-                  To provide world-class cybersecurity services that safeguard organizations from modern threats, while also delivering cutting-edge digital solutions that fuel business growth.
-                </p>
-              </div>
-            </ScrollReveal>
+          <ScrollReveal>
+            <div className="text-center mb-16">
+              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-blue-600 mb-2">Our Objectives</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Strategic Goals</h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                What drives us forward and shapes our approach to every project we undertake
+              </p>
+            </div>
             
-            <ScrollReveal delay={200}>
-              <div className="bg-webtah-mint rounded-lg p-8">
-                <h3 className="text-xl font-bold mb-4">Who We Are</h3>
-                <p className="text-webtah-text-secondary mb-6">
-                  We are a team of ethical hackers, cybersecurity analysts, creative designers, and full-stack developers united by a passion for technology and driven by results. Whether we're simulating cyberattacks to expose security flaws or designing high-converting websites, we approach every challenge with technical excellence and business-first thinking.
-                </p>
-                <ul className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-blue-800">Short-term Goals</h3>
+                <ul className="space-y-3">
                   <li className="flex items-start">
-                    <div className="mr-4 mt-1 bg-white rounded-full p-1">
-                      <Shield size={18} className="text-webtah-blue" />
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold">Cybersecurity Services</h4>
-                      <p className="text-webtah-text-secondary">From penetration testing and red teaming to vulnerability assessments and incident response, we proactively secure your IT infrastructure.</p>
+                      <h4 className="font-semibold">Client Success</h4>
+                      <p className="text-gray-600">Deliver exceptional results for every client project to establish strong relationships and reputation.</p>
                     </div>
                   </li>
                   <li className="flex items-start">
-                    <div className="mr-4 mt-1 bg-white rounded-full p-1">
-                      <Code size={18} className="text-webtah-blue" />
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
                     </div>
                     <div>
-                      <h4 className="font-semibold">Design & Development</h4>
-                      <p className="text-webtah-text-secondary">We design stunning, responsive websites and build powerful web applications that are optimized for performance, user experience, and digital marketing success.</p>
+                      <h4 className="font-semibold">Team Growth</h4>
+                      <p className="text-gray-600">Expand our team of experts to enhance our service capabilities and technical expertise.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Innovation Focus</h4>
+                      <p className="text-gray-600">Stay at the forefront of technology trends to offer cutting-edge solutions.</p>
                     </div>
                   </li>
                 </ul>
-                <div className="mt-8 grid grid-cols-2 gap-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                    alt="Cybersecurity lock" 
-                    className="rounded-lg shadow-md object-cover w-full h-32"
-                  />
-                  <img 
-                    src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                    alt="Digital security" 
-                    className="rounded-lg shadow-md object-cover w-full h-32"
-                  />
-                </div>
               </div>
-            </ScrollReveal>
-          </div>
+              
+              <div className="bg-blue-50 p-8 rounded-lg">
+                <h3 className="text-xl font-bold mb-4 text-blue-800">Long-term Vision</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Industry Leadership</h4>
+                      <p className="text-gray-600">Become a recognized leader in cybersecurity and digital transformation services.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Global Expansion</h4>
+                      <p className="text-gray-600">Extend our reach to serve clients across global markets with localized expertise.</p>
+                    </div>
+                  </li>
+                  <li className="flex items-start">
+                    <div className="mr-4 mt-1 bg-blue-100 rounded-full p-1">
+                      <Check size={16} className="text-blue-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold">Technology Impact</h4>
+                      <p className="text-gray-600">Develop proprietary technologies and methodologies that reshape digital security standards.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+      
+      {/* Mission Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Our Core Mission</h2>
+              <p className="text-webtah-text-secondary mb-6">
+                At Webtah Technologies, we are more than just a technology company — we are your long-term digital security and growth partner. Founded by a team of cybersecurity professionals and digital innovators, we help businesses protect their most valuable assets while also empowering them to thrive in the digital economy.
+              </p>
+              <p className="text-webtah-text-secondary mb-6">
+                To provide world-class cybersecurity services that safeguard organizations from modern threats, while also delivering cutting-edge digital solutions that fuel business growth.
+              </p>
+            </div>
+          </ScrollReveal>
+          
+          <ScrollReveal delay={200}>
+            <div className="bg-webtah-mint rounded-lg p-8 mt-8">
+              <h3 className="text-xl font-bold mb-4">Who We Are</h3>
+              <p className="text-webtah-text-secondary mb-6">
+                We are a team of ethical hackers, cybersecurity analysts, creative designers, and full-stack developers united by a passion for technology and driven by results. Whether we're simulating cyberattacks to expose security flaws or designing high-converting websites, we approach every challenge with technical excellence and business-first thinking.
+              </p>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="mr-4 mt-1 bg-white rounded-full p-1">
+                    <Shield size={18} className="text-webtah-blue" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Cybersecurity Services</h4>
+                    <p className="text-webtah-text-secondary">From penetration testing and red teaming to vulnerability assessments and incident response, we proactively secure your IT infrastructure.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <div className="mr-4 mt-1 bg-white rounded-full p-1">
+                    <Code size={18} className="text-webtah-blue" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold">Design & Development</h4>
+                    <p className="text-webtah-text-secondary">We design stunning, responsive websites and build powerful web applications that are optimized for performance, user experience, and digital marketing success.</p>
+                  </div>
+                </li>
+              </ul>
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <img 
+                  src="https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                  alt="Cybersecurity lock" 
+                  className="rounded-lg shadow-md object-cover w-full h-32"
+                />
+                <img 
+                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                  alt="Digital security" 
+                  className="rounded-lg shadow-md object-cover w-full h-32"
+                />
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
       
@@ -361,7 +559,7 @@ const About = () => {
                 Whether you're a startup needing a secure online launch or an enterprise strengthening your cyber resilience — Webtah Technologies is your trusted partner in the digital journey.
               </p>
               <Link to="/contact">
-                <Button className="bg-white text-webtah-blue-dark hover:bg-opacity-90 hover:shadow-lg hover:shadow-white/20 hover:-translate-y-1 transition-all duration-300 text-lg px-8 py-3">
+                <Button className="bg-white text-webtah-blue-dark text-lg px-8 py-3">
                   Let's Grow Together
                 </Button>
               </Link>
