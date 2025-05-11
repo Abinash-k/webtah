@@ -10,6 +10,9 @@ import Development from "./pages/Development";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import HomePage from "./pages/HomePage";
+import WebDevelopmentPage from "./pages/WebDevelopmentPage";
+import DigitalMarketingPage from "./pages/DigitalMarketingPage";
+import CyberSecurityPage from "./pages/CyberSecurityPage";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -47,6 +50,9 @@ const App = () => {
               <Route path="about" element={<About />} />
               <Route path="development" element={<Development />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="services/web-development" element={<WebDevelopmentPage />} />
+              <Route path="services/digital-marketing" element={<DigitalMarketingPage />} />
+              <Route path="services/cyber-security" element={<CyberSecurityPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

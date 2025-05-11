@@ -1,8 +1,17 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+import { cn } from '@/lib/utils';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +34,25 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Development', path: '/development' },
     { name: 'Contact', path: '/contact' }
+  ];
+
+  const serviceLinks = [
+    { 
+      name: 'Web Development', 
+      path: '/services/web-development',
+      description: 'Custom websites and web applications built for performance.'
+    },
+    { 
+      name: 'Digital Marketing', 
+      path: '/services/digital-marketing',
+      description: 'Grow your online presence with data-driven marketing strategies.'
+    },
+    { 
+      name: 'Cyber Security', 
+      path: '/services/cyber-security',
+      description: 'Protect your digital assets with our comprehensive security solutions.'
+    }
   ];
 
   return (
@@ -47,7 +73,41 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-md hover:shadow-lg transition-all duration-300">Get a Free Audit</Button>
+
+          {/* Services Dropdown for Desktop */}
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className={`text-black hover:text-blue-700 ${location.pathname.includes('/services') ? 'text-blue-700 font-medium' : ''}`}>
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                    {serviceLinks.map((service) => (
+                      <li key={service.name}>
+                        <NavigationMenuLink asChild>
+                          <Link
+                            to={service.path}
+                            className={cn(
+                              "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
+                              location.pathname === service.path ? "bg-blue-50" : ""
+                            )}
+                          >
+                            <div className="text-sm font-medium leading-none">{service.name}</div>
+                            <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                              {service.description}
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </li>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          
+          <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-md hover:shadow-lg transition-all duration-300 hover:scale-105">Get a Free Audit</Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -70,6 +130,20 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <div className="w-full border-t border-gray-200 pt-2">
+              <p className="font-medium mb-2">Services:</p>
+              {serviceLinks.map((service) => (
+                <Link 
+                  key={service.name} 
+                  to={service.path} 
+                  className={`text-black hover:text-blue-700 w-full py-2 pl-3 flex items-center ${location.pathname === service.path ? 'text-blue-700 font-medium' : ''}`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+                  {service.name}
+                </Link>
+              ))}
+            </div>
             <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white w-full" onClick={() => setIsMenuOpen(false)}>
               Get a Free Audit
             </Button>
