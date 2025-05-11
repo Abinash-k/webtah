@@ -32,9 +32,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Home', path: '/' }
   ];
 
   const serviceLinks = [
@@ -64,15 +62,13 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              to={link.path} 
-              className={`text-black hover:text-blue-700 transition-colors relative before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 hover:before:w-full before:bg-blue-700 before:transition-all ${location.pathname === link.path ? 'text-blue-700 font-medium' : ''}`}
-            >
-              {link.name}
-            </Link>
-          ))}
+          {/* Home */}
+          <Link 
+            to="/" 
+            className={`text-black hover:text-blue-700 transition-colors relative before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 hover:before:w-full before:bg-blue-700 before:transition-all ${location.pathname === '/' ? 'text-blue-700 font-medium' : ''}`}
+          >
+            Home
+          </Link>
 
           {/* Services Dropdown for Desktop */}
           <NavigationMenu>
@@ -107,6 +103,22 @@ const Navbar = () => {
             </NavigationMenuList>
           </NavigationMenu>
           
+          {/* About */}
+          <Link 
+            to="/about" 
+            className={`text-black hover:text-blue-700 transition-colors relative before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 hover:before:w-full before:bg-blue-700 before:transition-all ${location.pathname === '/about' ? 'text-blue-700 font-medium' : ''}`}
+          >
+            About
+          </Link>
+          
+          {/* Contact */}
+          <Link 
+            to="/contact" 
+            className={`text-black hover:text-blue-700 transition-colors relative before:absolute before:bottom-0 before:left-0 before:h-0.5 before:w-0 hover:before:w-full before:bg-blue-700 before:transition-all ${location.pathname === '/contact' ? 'text-blue-700 font-medium' : ''}`}
+          >
+            Contact
+          </Link>
+          
           <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white font-medium py-3 px-8 rounded-md hover:shadow-lg transition-all duration-300 hover:scale-105">Get a Free Audit</Button>
         </div>
 
@@ -120,16 +132,13 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg absolute top-full left-0 w-full animate-fade-in">
           <div className="flex flex-col items-start p-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                to={link.path} 
-                className={`text-black hover:text-blue-700 w-full py-2 ${location.pathname === link.path ? 'text-blue-700 font-medium' : ''}`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
-            ))}
+            <Link 
+              to="/" 
+              className={`text-black hover:text-blue-700 w-full py-2 ${location.pathname === '/' ? 'text-blue-700 font-medium' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Home
+            </Link>
             <div className="w-full border-t border-gray-200 pt-2">
               <p className="font-medium mb-2">Services:</p>
               {serviceLinks.map((service) => (
@@ -144,6 +153,20 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
+            <Link 
+              to="/about" 
+              className={`text-black hover:text-blue-700 w-full py-2 ${location.pathname === '/about' ? 'text-blue-700 font-medium' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              About
+            </Link>
+            <Link 
+              to="/contact" 
+              className={`text-black hover:text-blue-700 w-full py-2 ${location.pathname === '/contact' ? 'text-blue-700 font-medium' : ''}`}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Contact
+            </Link>
             <Button className="bg-gradient-to-r from-blue-600 to-blue-800 text-white w-full" onClick={() => setIsMenuOpen(false)}>
               Get a Free Audit
             </Button>

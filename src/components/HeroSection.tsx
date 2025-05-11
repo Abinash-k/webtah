@@ -86,6 +86,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
       <div className="container-custom relative z-10">
         <div className="max-w-3xl mx-auto text-center">
+          {/* Company Slogan */}
+          <div className="mb-4">
+            <span className="inline-block text-sm md:text-base font-bold bg-gradient-to-r from-blue-200 to-purple-200 bg-clip-text text-transparent px-4 py-1 rounded-full border border-white/10 backdrop-blur-sm">
+              Design • Develop • Defend
+            </span>
+          </div>
+          
           <h1 
             className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
@@ -112,11 +119,11 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {showSecondaryButton && (
               <Button 
                 variant="outline" 
-                className="border-2 border-white text-white hover:bg-white/10 hover:scale-105 transition-all duration-300 text-lg px-8 py-6 font-semibold group"
+                className="border-2 border-white text-white transition-all duration-300 text-lg px-8 py-6 font-semibold"
               >
                 <span className="relative flex items-center">
                   Security Audit
-                  <Play className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <Play className="ml-2 h-4 w-4" />
                 </span>
               </Button>
             )}
