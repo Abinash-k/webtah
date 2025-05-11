@@ -5,9 +5,15 @@ interface ScrollRevealProps {
   children: React.ReactNode;
   threshold?: number;
   delay?: number;
+  animation?: 'fade-up' | 'fade-left' | 'fade-right' | 'zoom-in';
 }
 
-const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, threshold = 0.1, delay = 0 }) => {
+const ScrollReveal: React.FC<ScrollRevealProps> = ({ 
+  children, 
+  threshold = 0.1, 
+  delay = 0,
+  animation = 'fade-up' 
+}) => {
   const ref = useRef<HTMLDivElement>(null);
   
   useEffect(() => {
@@ -37,8 +43,26 @@ const ScrollReveal: React.FC<ScrollRevealProps> = ({ children, threshold = 0.1, 
     };
   }, [threshold, delay]);
   
+  const getAnimationClass = () => {
+    switch (animation) {
+      case 'fade-left':
+        return 'animate-fade-in-left';
+      case 'fade-right':
+        return 'animate-fade-in-right';
+      case 'zoom-in':
+        return 'animate-zoom-in';
+      case 'fade-up':
+      default:
+        return 'animate-fade-in-up';
+    }
+  };
+  
   return (
-    <div ref={ref} className="reveal" style={{ transitionDelay: `${delay}ms` }}>
+    <div 
+      ref={ref} 
+      className={`reveal ${getAnimationClass()}`} 
+      style={{ transitionDelay: `${delay}ms` }}
+    >
       {children}
     </div>
   );

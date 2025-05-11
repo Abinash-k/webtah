@@ -37,6 +37,50 @@ const Layout: React.FC = () => {
     };
   }, []);
 
+  // Function to add gradient classes to alternating sections
+  useEffect(() => {
+    const applyGradients = () => {
+      const sections = document.querySelectorAll('section');
+      const gradientClasses = [
+        'bg-light-blue-gradient', 
+        'bg-teal-gradient', 
+        'bg-royal-blue-gradient', 
+        'bg-blue-teal-gradient',
+        'bg-light-teal-gradient',
+        'bg-gentle-blue-gradient'
+      ];
+      
+      // Apply different gradient to alternating sections
+      sections.forEach((section, index) => {
+        if (!section.classList.contains('bg-gradient-to-r') && 
+            !section.classList.contains('bg-black') && 
+            !section.classList.contains('bg-blue-900')) {
+          
+          const gradientClass = gradientClasses[index % gradientClasses.length];
+          section.classList.add(gradientClass);
+        }
+      });
+    };
+    
+    // Apply gradients and run again if DOM changes
+    applyGradients();
+    
+    // Create a mutation observer to watch for new sections
+    const observer = new MutationObserver(() => {
+      applyGradients();
+    });
+    
+    // Start observing
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
+    return () => {
+      observer.disconnect();
+    };
+  }, [pathname]);
+
   return (
     <div className="flex flex-col min-h-screen bg-white">
       <Navbar />
