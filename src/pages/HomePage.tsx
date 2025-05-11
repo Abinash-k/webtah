@@ -28,7 +28,7 @@ const HomePage = () => {
                 <Button size="lg" className="bg-white text-black hover:bg-white/90 hover:scale-105 transition-all duration-300">
                   Our Services
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 hover:scale-105 transition-all duration-300">
+                <Button size="lg" variant="outline" className="border-white hover:bg-white/20 hover:scale-105 transition-all duration-300 text-zinc-50">
                   Get Free Audit
                 </Button>
               </div>
