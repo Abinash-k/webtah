@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Shield, Code, TrendingUp, Server, Bug, Lock, Eye } from 'lucide-react';
+import { Shield, Code, TrendingUp, Server, Bug, Lock, Eye, Search, Users } from 'lucide-react';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQSection from '@/components/FAQSection';
 import ServiceBox from '@/components/ServiceBox';
