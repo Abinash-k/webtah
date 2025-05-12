@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -13,6 +12,7 @@ import HomePage from "./pages/HomePage";
 import WebDevelopmentPage from "./pages/WebDevelopmentPage";
 import DigitalMarketingPage from "./pages/DigitalMarketingPage";
 import CyberSecurityPage from "./pages/CyberSecurityPage";
+import DesignPage from "./pages/DesignPage";
 import { useEffect } from "react";
 
 const queryClient = new QueryClient();
@@ -53,6 +53,7 @@ const App = () => {
               <Route path="services/web-development" element={<WebDevelopmentPage />} />
               <Route path="services/digital-marketing" element={<DigitalMarketingPage />} />
               <Route path="services/cyber-security" element={<CyberSecurityPage />} />
+              <Route path="services/designing" element={<DesignPage />} />
             </Route>
             <Route path="*" element={<NotFound />} />
           </Routes>

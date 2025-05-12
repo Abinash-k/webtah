@@ -33,6 +33,11 @@ const Navbar = () => {
 
   const serviceLinks = [
     { 
+      name: 'Designing', 
+      path: '/services/designing',
+      description: 'Creative design solutions that elevate your digital presence.'
+    },
+    { 
       name: 'Web Development', 
       path: '/services/web-development',
       description: 'Custom websites and web applications built for performance.'
