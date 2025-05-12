@@ -9,8 +9,17 @@ import {
 import ScrollReveal from './ScrollReveal';
 import { Shield, HelpCircle } from 'lucide-react';
 
-const FAQSection = () => {
-  const faqs = [
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+interface FAQSectionProps {
+  customFaqs?: FAQ[];
+}
+
+const FAQSection: React.FC<FAQSectionProps> = ({ customFaqs }) => {
+  const defaultFaqs = [
     {
       question: "What services do you offer?",
       answer: "We offer comprehensive cybersecurity services including penetration testing, vulnerability assessment, red teaming, and incident response, as well as web development services including website design, web application development, and digital marketing."
@@ -33,6 +42,7 @@ const FAQSection = () => {
     }
   ];
 
+  const faqs = customFaqs || defaultFaqs;
   const [expandedItem, setExpandedItem] = useState<string | null>(null);
 
   return (
