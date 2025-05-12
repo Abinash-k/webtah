@@ -1,11 +1,13 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { Shield, Code, TrendingUp, Server, Bug, Lock, Eye, Search, Users, Palette, PenTool, Layout } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
-import { Shield, Code, TrendingUp, Server, Bug, Lock, Eye, Search, Users, Palette } from 'lucide-react';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQSection from '@/components/FAQSection';
 import ServiceBox from '@/components/ServiceBox';
+
 const HomePage = () => {
   return <>
       {/* Hero Section with Gradient Overlay and Pattern */}
@@ -103,7 +105,7 @@ const HomePage = () => {
               <ServiceBox 
                 title="Designing" 
                 icon={<Palette />} 
-                color="blue" 
+                color="purple" 
                 link="/services/designing" 
                 description="Creative design solutions that elevate your brand's visual identity and user experience." 
                 imageSrc="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
@@ -139,6 +141,76 @@ const HomePage = () => {
                 imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
                 imageAlt="Cybersecurity concept" 
               />
+            </div>
+          </ScrollReveal>
+        </div>
+      </section>
+
+      {/* Designing Services Section */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container-custom">
+          <ScrollReveal>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-purple-600 mb-2">Creative Excellence</span>
+                <h2 className="text-3xl md:text-4xl font-bold mb-6"><span className="text-purple-600">Design</span> Solutions</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  Our talented design team creates visually stunning, brand-aligned designs that captivate audiences and elevate your digital presence.
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  <div className="flex gap-3">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <Palette className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Brand Identity</h4>
+                      <p className="text-sm text-gray-600">Build a memorable brand</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <PenTool className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">UI/UX Design</h4>
+                      <p className="text-sm text-gray-600">Intuitive user experiences</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <Layout className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Print & Digital</h4>
+                      <p className="text-sm text-gray-600">Multi-channel design</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex gap-3">
+                    <div className="p-2 bg-purple-100 rounded-lg">
+                      <PenTool className="w-5 h-5 text-purple-600" />
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-1">Motion Graphics</h4>
+                      <p className="text-sm text-gray-600">Engaging animations</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <Link to="/services/designing">
+                  <Button className="bg-purple-600 text-white hover:bg-purple-700 hover:scale-105 transition-all duration-300">
+                    Learn More About Design Services
+                  </Button>
+                </Link>
+              </div>
+              
+              <div className="relative">
+                <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-400 opacity-10 rounded-full"></div>
+                <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Design services" className="rounded-lg shadow-lg object-cover w-full transform hover:scale-105 transition-transform duration-500" />
+              </div>
             </div>
           </ScrollReveal>
         </div>
