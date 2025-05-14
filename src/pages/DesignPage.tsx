@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -41,9 +42,6 @@ const DesignPage = () => {
                 <div className="flex flex-wrap gap-4">
                   <Button size="lg" className="bg-white text-black">
                     View Portfolio
-                  </Button>
-                  <Button size="lg" variant="outline" className="border-white text-zinc-50">
-                    Get Free Consultation
                   </Button>
                 </div>
               </ScrollReveal>
@@ -270,23 +268,6 @@ const DesignPage = () => {
               View Full Portfolio
             </Button>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container-custom">
-          <ScrollReveal>
-            <div className="text-center mb-16">
-              <span className="inline-block text-xs md:text-sm font-bold tracking-wider uppercase text-blue-600 mb-2">Client Feedback</span>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-                Read what our clients have to say about our design services
-              </p>
-            </div>
-            
-            <TestimonialsSlider />
-          </ScrollReveal>
         </div>
       </section>
 
