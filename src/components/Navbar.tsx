@@ -58,7 +58,11 @@ const Navbar = () => {
     <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-soft py-2' : 'bg-transparent py-4'}`}>
       <div className="container-custom flex items-center justify-between">
         <Link to="/" className="flex items-center">
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">Webtah</span>
+          <img 
+            src="/lovable-uploads/a57b75a4-315c-4872-8581-9fa0227a354d.png" 
+            alt="Webtah Logo" 
+            className="h-10" 
+          />
         </Link>
 
         {/* Desktop Navigation */}
