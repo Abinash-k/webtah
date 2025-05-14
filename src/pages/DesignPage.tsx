@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -6,33 +5,24 @@ import { Palette, PenTool, LayoutTemplate, Paintbrush, Eye } from 'lucide-react'
 import TestimonialsSlider from '@/components/TestimonialsSlider';
 import { Link } from 'react-router-dom';
 import FAQSection from '@/components/FAQSection';
-
 const DesignPage = () => {
-  const designFAQs = [
-    {
-      question: "What types of design services do you offer?",
-      answer: "We offer a comprehensive range of design services including UI/UX design, graphic design, branding, logo design, web design, print design, and product design. Our team specializes in creating cohesive visual identities that communicate your brand's values effectively."
-    },
-    {
-      question: "How long does a typical design project take?",
-      answer: "Project timelines vary based on scope and complexity. A logo design might take 1-2 weeks, while a complete brand identity package could take 4-6 weeks. Website design projects typically range from 3-8 weeks depending on size and functionality. During our initial consultation, we'll provide a specific timeline for your project."
-    },
-    {
-      question: "What is your design process like?",
-      answer: "Our design process begins with discovery, where we learn about your business, goals, and audience. Next comes research and strategy, followed by concept development. After presenting initial concepts, we refine based on your feedback. Finally, we deliver the finalized designs in all necessary formats and provide guidelines for implementation."
-    },
-    {
-      question: "How do you price your design services?",
-      answer: "Our pricing is project-based and depends on factors like project scope, complexity, timeline, and deliverables. We provide detailed proposals after understanding your specific needs. We also offer packages for common services like brand identity design and website design."
-    },
-    {
-      question: "Will I own the rights to the designs you create?",
-      answer: "Yes, once a project is complete and paid for, you will own all rights to the final designs we create for you. We may request permission to showcase the work in our portfolio, but the intellectual property rights transfer to you upon project completion."
-    }
-  ];
-  
-  return (
-    <>
+  const designFAQs = [{
+    question: "What types of design services do you offer?",
+    answer: "We offer a comprehensive range of design services including UI/UX design, graphic design, branding, logo design, web design, print design, and product design. Our team specializes in creating cohesive visual identities that communicate your brand's values effectively."
+  }, {
+    question: "How long does a typical design project take?",
+    answer: "Project timelines vary based on scope and complexity. A logo design might take 1-2 weeks, while a complete brand identity package could take 4-6 weeks. Website design projects typically range from 3-8 weeks depending on size and functionality. During our initial consultation, we'll provide a specific timeline for your project."
+  }, {
+    question: "What is your design process like?",
+    answer: "Our design process begins with discovery, where we learn about your business, goals, and audience. Next comes research and strategy, followed by concept development. After presenting initial concepts, we refine based on your feedback. Finally, we deliver the finalized designs in all necessary formats and provide guidelines for implementation."
+  }, {
+    question: "How do you price your design services?",
+    answer: "Our pricing is project-based and depends on factors like project scope, complexity, timeline, and deliverables. We provide detailed proposals after understanding your specific needs. We also offer packages for common services like brand identity design and website design."
+  }, {
+    question: "Will I own the rights to the designs you create?",
+    answer: "Yes, once a project is complete and paid for, you will own all rights to the final designs we create for you. We may request permission to showcase the work in our portfolio, but the intellectual property rights transfer to you upon project completion."
+  }];
+  return <>
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-r from-black to-blue-900 py-20 lg:py-32">
         <div className="absolute inset-0 bg-[url('/pattern-bg.svg')] opacity-10"></div>
@@ -63,11 +53,7 @@ const DesignPage = () => {
               <div className="hidden lg:block relative">
                 <div className="absolute -top-6 -left-6 w-20 h-20 bg-blue-400 rounded-full opacity-20"></div>
                 <div className="absolute bottom-10 -right-10 w-32 h-32 bg-blue-300 rounded-full opacity-20"></div>
-                <img 
-                  alt="Creative design workspace" 
-                  className="rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md object-cover" 
-                  src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                />
+                <img alt="Creative design workspace" className="rounded-lg shadow-2xl border border-blue-800/30 w-full max-w-md object-cover" src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" />
               </div>
             </ScrollReveal>
           </div>
@@ -250,11 +236,7 @@ const DesignPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <ScrollReveal animation="fade-up" delay={100}>
               <div className="bg-white rounded-lg overflow-hidden shadow-soft group relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Web design project" 
-                  className="w-full h-64 object-cover transition-transform duration-500"
-                />
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Web design project" className="w-full h-64 object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-white text-xl font-bold">E-Commerce Redesign</h3>
                   <p className="text-white/80 mt-2">UI/UX, Web Design</p>
@@ -264,11 +246,7 @@ const DesignPage = () => {
             
             <ScrollReveal animation="fade-up" delay={200}>
               <div className="bg-white rounded-lg overflow-hidden shadow-soft group relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Brand identity project" 
-                  className="w-full h-64 object-cover transition-transform duration-500"
-                />
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Brand identity project" className="w-full h-64 object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-white text-xl font-bold">Luxury Brand Identity</h3>
                   <p className="text-white/80 mt-2">Branding, Logo Design</p>
@@ -278,11 +256,7 @@ const DesignPage = () => {
             
             <ScrollReveal animation="fade-up" delay={300}>
               <div className="bg-white rounded-lg overflow-hidden shadow-soft group relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="App design project" 
-                  className="w-full h-64 object-cover transition-transform duration-500"
-                />
+                <img src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="App design project" className="w-full h-64 object-cover transition-transform duration-500" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex flex-col justify-end p-6">
                   <h3 className="text-white text-xl font-bold">Fitness App Design</h3>
                   <p className="text-white/80 mt-2">UI/UX, Mobile App</p>
@@ -354,18 +328,12 @@ const DesignPage = () => {
               
               <div className="hidden lg:block relative">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-blue-400 rounded-full opacity-20"></div>
-                <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Design workspace" 
-                  className="rounded-lg shadow-2xl border border-blue-700/30 object-cover w-full"
-                />
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Design workspace" className="rounded-lg shadow-2xl border border-blue-700/30 object-cover w-full" />
               </div>
             </div>
           </ScrollReveal>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default DesignPage;
