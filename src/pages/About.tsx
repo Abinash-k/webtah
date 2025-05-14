@@ -6,10 +6,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import TestimonialCard from '@/components/TestimonialCard';
 import VisionMission from '@/components/VisionMission';
-
 const About = () => {
-  return (
-    <>
+  return <>
       <section className="relative overflow-hidden bg-gradient-to-r from-black to-blue-900 py-20 lg:py-32">
         <div className="absolute inset-0 bg-[url('/pattern-bg.svg')] opacity-10"></div>
         <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-l from-white/10 to-transparent"></div>
@@ -32,17 +30,9 @@ const About = () => {
             </div>
             
             <div className="hidden lg:block relative">
-              <img 
-                src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" 
-                alt="Cybersecurity professional"
-                className="rounded-lg shadow-2xl border border-blue-700/30 w-full max-w-md mx-auto object-cover"
-              />
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=600" alt="Cybersecurity professional" className="rounded-lg shadow-2xl border border-blue-700/30 w-full max-w-md mx-auto object-cover" />
               <div className="absolute -bottom-6 -right-6 w-32 h-32 rounded-full overflow-hidden border-4 border-white shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" 
-                  alt="Team member"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=300" alt="Team member" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -290,16 +280,8 @@ const About = () => {
                 </li>
               </ul>
               <div className="mt-8 grid grid-cols-2 gap-4">
-                <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Cybersecurity lock" 
-                  className="rounded-lg shadow-md object-cover w-full h-32"
-                />
-                <img 
-                  src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Digital security" 
-                  className="rounded-lg shadow-md object-cover w-full h-32"
-                />
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Cybersecurity lock" className="rounded-lg shadow-md object-cover w-full h-32" />
+                <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Digital security" className="rounded-lg shadow-md object-cover w-full h-32" />
               </div>
             </div>
           </ScrollReveal>
@@ -319,54 +301,20 @@ const About = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <TestimonialCard 
-                quote="Webtah Technologies transformed our cybersecurity posture. Their penetration testing uncovered vulnerabilities we had no idea existed." 
-                author="Jessica Brown" 
-                role="CTO, FinSecure Inc." 
-                rating={5}
-                delay={100}
-              />
+              <TestimonialCard quote="Webtah Technologies transformed our cybersecurity posture. Their penetration testing uncovered vulnerabilities we had no idea existed." author="Jessica Brown" role="CTO, FinSecure Inc." rating={5} delay={100} />
               
-              <TestimonialCard 
-                quote="Their red team operations provided invaluable insights into our security gaps. The detailed reporting helped us prioritize our security investments." 
-                author="Michael Reynolds" 
-                role="CISO, TechCorp" 
-                rating={5}
-                delay={200}
-              />
+              <TestimonialCard quote="Their red team operations provided invaluable insights into our security gaps. The detailed reporting helped us prioritize our security investments." author="Michael Reynolds" role="CISO, TechCorp" rating={5} delay={200} />
               
-              <TestimonialCard 
-                quote="We sleep better at night knowing Webtah is monitoring our systems. Their incident response team detected and neutralized a threat before any damage occurred." 
-                author="Sarah Johnson" 
-                role="IT Director" 
-                rating={5}
-                delay={300}
-              />
+              <TestimonialCard quote="We sleep better at night knowing Webtah is monitoring our systems. Their incident response team detected and neutralized a threat before any damage occurred." author="Sarah Johnson" role="IT Director" rating={5} delay={300} />
             </div>
           </ScrollReveal>
           
           <ScrollReveal delay={100}>
             <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6">
-              <img 
-                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Business professional" 
-                className="rounded-lg shadow-md object-cover w-full h-48"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Female professional" 
-                className="rounded-lg shadow-md object-cover w-full h-48"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Security professional" 
-                className="rounded-lg shadow-md object-cover w-full h-48"
-              />
-              <img 
-                src="https://images.unsplash.com/photo-1633269540827-728e0512c343?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                alt="Cybersecurity concept" 
-                className="rounded-lg shadow-md object-cover w-full h-48"
-              />
+              <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Business professional" className="rounded-lg shadow-md object-cover w-full h-48" />
+              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Female professional" className="rounded-lg shadow-md object-cover w-full h-48" />
+              <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Security professional" className="rounded-lg shadow-md object-cover w-full h-48" />
+              <img src="https://images.unsplash.com/photo-1633269540827-728e0512c343?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Cybersecurity concept" className="rounded-lg shadow-md object-cover w-full h-48" />
             </div>
           </ScrollReveal>
         </div>
@@ -418,11 +366,7 @@ const About = () => {
                 <p className="text-webtah-text-secondary">
                   Clear, concise reports that explain technical issues in business terms.
                 </p>
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Data analysis" 
-                  className="mt-4 rounded-md shadow-sm object-cover w-full h-32"
-                />
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Data analysis" className="mt-4 rounded-md shadow-sm object-cover w-full h-32" />
               </div>
             </ScrollReveal>
             
@@ -432,11 +376,7 @@ const About = () => {
                 <p className="text-webtah-text-secondary">
                   We adapt quickly to changing needs and priorities without compromising quality.
                 </p>
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                  alt="Team collaboration" 
-                  className="mt-4 rounded-md shadow-sm object-cover w-full h-32"
-                />
+                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Team collaboration" className="mt-4 rounded-md shadow-sm object-cover w-full h-32" />
               </div>
             </ScrollReveal>
             
@@ -478,11 +418,7 @@ const About = () => {
                   <p className="ml-4 text-webtah-text-secondary">We listen first, then recommend solutions</p>
                 </div>
                 <div className="mt-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                    alt="Team consultation" 
-                    className="rounded-md shadow-sm object-cover w-full h-40"
-                  />
+                  <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Team consultation" className="rounded-md shadow-sm object-cover w-full h-40" />
                 </div>
               </div>
             </ScrollReveal>
@@ -515,11 +451,7 @@ const About = () => {
                   <p className="ml-4 text-webtah-text-secondary">Security built into everything we do</p>
                 </div>
                 <div className="mt-4">
-                  <img 
-                    src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                    alt="Data privacy" 
-                    className="rounded-md shadow-sm object-cover w-full h-40"
-                  />
+                  <img src="https://images.unsplash.com/photo-1593642532973-d31b6557fa68?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" alt="Data privacy" className="rounded-md shadow-sm object-cover w-full h-40" />
                 </div>
               </div>
             </ScrollReveal>
@@ -563,8 +495,6 @@ const About = () => {
           </ScrollReveal>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default About;
