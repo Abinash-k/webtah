@@ -6,7 +6,6 @@ import ScrollReveal from '@/components/ScrollReveal';
 import TestimonialCard from '@/components/TestimonialCard';
 import FAQSection from '@/components/FAQSection';
 import ServiceBox from '@/components/ServiceBox';
-
 const HomePage = () => {
   return <>
       {/* Hero Section with Gradient Overlay and Pattern */}
@@ -101,45 +100,13 @@ const HomePage = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <ServiceBox 
-                title="Designing" 
-                icon={<Palette />} 
-                color="purple" 
-                link="/services/designing" 
-                description="Creative design solutions that elevate your brand's visual identity and user experience." 
-                imageSrc="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                imageAlt="Design concept" 
-              />
+              <ServiceBox title="Designing" icon={<Palette />} color="purple" link="/services/designing" description="Creative design solutions that elevate your brand's visual identity and user experience." imageSrc="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" imageAlt="Design concept" />
               
-              <ServiceBox 
-                title="Web Development" 
-                icon={<Code />} 
-                color="blue" 
-                link="/services/web-development" 
-                description="Custom websites and web applications built for performance, user experience, and business growth." 
-                imageSrc="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                imageAlt="Web development concept" 
-              />
+              <ServiceBox title="Web Development" icon={<Code />} color="blue" link="/services/web-development" description="Custom websites and web applications built for performance, user experience, and business growth." imageSrc="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" imageAlt="Web development concept" />
               
-              <ServiceBox 
-                title="Digital Marketing" 
-                icon={<TrendingUp />} 
-                color="purple" 
-                link="/services/digital-marketing" 
-                description="Data-driven marketing strategies to increase your online visibility, drive traffic, and convert visitors into customers." 
-                imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                imageAlt="Digital marketing concept" 
-              />
+              <ServiceBox title="Digital Marketing" icon={<TrendingUp />} color="purple" link="/services/digital-marketing" description="Data-driven marketing strategies to increase your online visibility, drive traffic, and convert visitors into customers." imageSrc="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" imageAlt="Digital marketing concept" />
               
-              <ServiceBox 
-                title="Cyber Security" 
-                icon={<Shield />} 
-                color="blue" 
-                link="/services/cyber-security" 
-                description="Proactive security solutions designed to protect your digital assets from evolving cyber threats." 
-                imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
-                imageAlt="Cybersecurity concept" 
-              />
+              <ServiceBox title="Cyber Security" icon={<Shield />} color="blue" link="/services/cyber-security" description="Proactive security solutions designed to protect your digital assets from evolving cyber threats." imageSrc="https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" imageAlt="Cybersecurity concept" />
             </div>
           </ScrollReveal>
         </div>
