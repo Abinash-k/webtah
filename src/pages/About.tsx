@@ -1,4 +1,3 @@
-
 import React from 'react';
 import HeroSection from '@/components/HeroSection';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -28,9 +27,6 @@ const About = () => {
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-white text-black">
                   Meet Our Team
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white">
-                  Our Process
                 </Button>
               </div>
             </div>
@@ -295,7 +291,7 @@ const About = () => {
               </ul>
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <img 
-                  src="https://images.unsplash.com/photo-1573164574001-518958d9baa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
                   alt="Cybersecurity lock" 
                   className="rounded-lg shadow-md object-cover w-full h-32"
                 />
@@ -546,8 +542,8 @@ const About = () => {
         </div>
       </section>
       
-      {/* Vision Section */}
-      <section className="section-padding bg-webtah-blue text-white">
+      {/* Vision Section - Reduced top margin/padding to reduce gap */}
+      <section className="py-8 md:py-12 bg-webtah-blue text-white">
         <div className="container-custom">
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center">
@@ -555,7 +551,7 @@ const About = () => {
               <p className="text-xl mb-4">
                 To become a leading force in cyber defense and digital transformation, enabling businesses worldwide to grow securely and confidently.
               </p>
-              <p className="text-lg opacity-90 mb-8">
+              <p className="text-lg opacity-90 mb-6">
                 Whether you're a startup needing a secure online launch or an enterprise strengthening your cyber resilience — Webtah Technologies is your trusted partner in the digital journey.
               </p>
               <Link to="/contact">

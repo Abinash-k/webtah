@@ -27,9 +27,6 @@ const WebDevelopmentPage = () => {
                 <Button size="lg" className="bg-white text-blue-900 hover:bg-white/90 hover:scale-105 transition-all">
                   Get Started
                 </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 hover:scale-105 transition-all">
-                  View Portfolio
-                </Button>
               </div>
               
               <div className="flex items-center mt-12">
@@ -214,9 +211,6 @@ const WebDevelopmentPage = () => {
               <div className="flex flex-wrap justify-center gap-4">
                 <Button size="lg" className="bg-white text-blue-900 hover:bg-white/90 hover:scale-105 transition-all">
                   Get a Free Consultation
-                </Button>
-                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/20 hover:scale-105 transition-all">
-                  View Our Portfolio
                 </Button>
               </div>
             </div>
